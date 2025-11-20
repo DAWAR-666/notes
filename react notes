@@ -1,0 +1,29 @@
+REACT NOTES
+use cdn links by searching cdn react and pull it to the project
+wth this we add react to our project.. copy the 2 script tags and just paste it above the end of body tag
+what is cdn?
+wht is crossorigin?
+REACT is a javascript library
+react needs a root for all the dom manipulation
+    creating root and rendering inside it is a part of react dom hence "REACTDOM.createRoot"
+react gives helper function to optimize frontend
+
+const heading=React.createElement ("h1",{},"sup")
+    here{} is used to enter the attributes of the tag like id and also user defined attributes
+    like const heading=React.createElement("h1",{id:'heading',xyz:'abc'},"sup");
+    createElement creates an object 
+    and the render method is converting the object into its 
+    specified tags and putting it up to the html
+
+
+for nested elements we can pass an array of reactElement function in the 3rd parameter
+to avoid nested function and complexity of creation of elements we use JSX
+
+
+root.render() replaces everything inside the root present inside the div with id root becuase we defined it as our root
+
+react can be applied to small part fo our website hence called library
+
+and frameworks are something that we use it entirely to create the app
+we do not use it to apply it in small part of our app
+
