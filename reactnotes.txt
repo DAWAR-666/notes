@@ -27,3 +27,50 @@ react can be applied to small part fo our website hence called library
 and frameworks are something that we use it entirely to create the app
 we do not use it to apply it in small part of our app
 
+
+
+
+EP2
+
+
+npm- is not node package manager although it manages node packages but it has no full form
+its a stndard repo for all the packages
+
+when we create React app then npm is already inside it
+we can add npm why typing npm init in terminal and it will ask few ques after which it will add package.json file
+package.json - is configuration for npm it keeps the track of approx version of package installed
+
+packages and dependencies are same thing on which our project is dependent upon
+dependencies like bundler
+bundlers like(webpack,vite,parcel) all are similar
+
+there are 2 types of dependencies
+one are dev dependencies other are normal
+dev dependencies are required for developmet phase
+normal our also used for production
+
+npm install -D vite --> here -d represent that the dependicy is dev dependency and not normal dependencies
+version shows ^(caret) instead of ~(tilde) where ^ will automatically update the version of vite
+when new version is released
+
+
+after installation package-lock.json comes in the repo
+this keeps the track of exact version that is being installed
+to avoid problems like project working on local but not on production
+package-lock.json keeps a hash to verify whatever is there on my machine is the same version that is being deployed
+keeps the track of all the exact version
+
+after installation node modules are also installed
+npm fetched all the code of vite and put it there
+node modules fetches all the code of all the dependencies into our system
+and we can now use that code
+in the modules there are various files which are like transitive dependicies
+thet is vite is dependent on other dependencies which are depenedent on other dependencies and so on
+hence so many files in node modules
+
+npm vite <html file name> = to create the app
+npx- executing a package
+the above cmnd will create a local server and host the html file on it
+
+
+nringing react from cdn links are not good options
