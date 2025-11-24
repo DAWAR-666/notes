@@ -73,4 +73,75 @@ npx- executing a package
 the above cmnd will create a local server and host the html file on it
 
 
-nringing react from cdn links are not good options
+bringing react from cdn links are not good options
+
+
+
+EP3
+instead of npx command we can use npm scripts
+in package.json file in script section
+    we can add start:"parcel index.html"
+    this will tell the start of our dev command
+    and build:"parcel build index.html" this will create a production build 
+after adding these things we need not write npx command anymore
+we can write npm run start --> this will automatically run the start command mentioned under script section
+or we can also use npm start this is only for start and not for build
+
+
+
+react elements are kind of equivalent to dom elements
+react.createElement is and object when we render this onto dom it becomes html
+for multi line defination use () and write all the content of react element inside the parenthesis
+
+what is jsx?
+is js syntax which is easier to create react elements
+and it is different from react,not a part of react
+jsx is a html like syntax and not html in js
+jsx is transpiled
+jsx is not an appropriate javascript code it will show error if we try to run in browser console
+but the parcel while rendering transpiles the code before it goes to js engine
+and js engine receive the code that browser can understand
+our code is readable due to the use of jsx
+
+transpiled means the code is converted into code that browser and react can understand
+transpiling is done by parcel using a package "BABEL"
+jsx code is transpiled to react.createElement which is a js object which on further rendering becomes html element
+use camelcase for attributes in jsx
+
+babel is a open source javascript compiler 
+
+
+react component
+everything is a component (true)
+but what is component?
+    class based component
+        old way of writing code
+        nobody uses
+
+    functional components
+        new way of writing code
+        just a normal js function which returns some jsx or react element
+        always name it with capital letter
+        define it using arrow notation
+        const HeadingComponent=()=>(
+            div
+                h1 /h1
+            /div
+        );
+        to render a component directly using render function we use root.render(<HeadingComponent />)
+        here the headingcomponent is the name of component that is being render.replace it with the ones to be rendered
+
+        to render another component inside other component
+        write <name /> where you want to render it
+        component composition is rendering other compnent inside another component
+        multiple elements cant be returned in component ,all the elements must be defined inside a parent component
+        we can define using normal function keyword also but arrow notation is kind of standard
+        
+
+
+        to put react element inside component we can write the variable name inside {} eg {title}
+        and we put any js code inside {} which is present inside component
+
+        inside a element also we can write element name between{} inside another react element 
+
+        component cant be rendered inside any other element or component until they are initialised
