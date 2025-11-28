@@ -145,3 +145,32 @@ but what is component?
         inside a element also we can write element name between{} inside another react element 
 
         component cant be rendered inside any other element or component until they are initialised
+
+
+
+
+
+
+EP4
+creation of food app
+intro to props
+
+PROPS
+    they are just arguments to a functional components
+    they are used to create dynamic elements which have similar structure but different data to be present in them
+    they are javascript obeject and can be used inside{} and we can pass many prop during functional and need not define several parameter during function definition
+    we can just write props in function definition parameters
+
+
+config driven ui 
+
+always use keys in map
+
+
+
+EP5
+
+
+
+hooks
+    
