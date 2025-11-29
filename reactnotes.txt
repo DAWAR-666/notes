@@ -7,6 +7,7 @@ REACT is a javascript library
 react needs a root for all the dom manipulation
     creating root and rendering inside it is a part of react dom hence "REACTDOM.createRoot"
 react gives helper function to optimize frontend
+react is fast as it uses virtual dom manipulation
 
 const heading=React.createElement ("h1",{},"sup")
     here{} is used to enter the attributes of the tag like id and also user defined attributes
@@ -171,6 +172,32 @@ always use keys in map
 EP5
 
 
-
-hooks
+    separation of components in different file
+        import export
+        export
+            named and default
     
+
+    hooks
+        a normal js utitlity functin given by react
+        it has super power with logic behind it
+        2 imp hooks (usestate(),useeffect())
+        behaves a s a normal variable
+
+
+        whenever a state variable changes react will re-render the component
+        useState()
+            superpowerful state variable
+                maintains the state of a component
+            import it using named import from react
+                import { useState } from "react"
+            creation of state variable
+                const [nameof variable]=useState()
+        
+
+
+        BTS OF REACT
+
+         react uses RECONCILIATION ALGORTHIGM AKA REACT FIBER (change in UI)
+            uses virtual DOM which is a representation of actual DOM
+            uses diff ALGORTHIGM which finds the difference between updated virtual dom and previous virtual dom
