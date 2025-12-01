@@ -8,6 +8,8 @@ react needs a root for all the dom manipulation
     creating root and rendering inside it is a part of react dom hence "REACTDOM.createRoot"
 react gives helper function to optimize frontend
 react is fast as it uses virtual dom manipulation
+react is fast as it incorporates algorithm like reconciliation algo(react fiber)
+    due to this efficient dom manipulation can be done
 
 const heading=React.createElement ("h1",{},"sup")
     here{} is used to enter the attributes of the tag like id and also user defined attributes
@@ -201,3 +203,28 @@ EP5
          react uses RECONCILIATION ALGORTHIGM AKA REACT FIBER (change in UI)
             uses virtual DOM which is a representation of actual DOM
             uses diff ALGORTHIGM which finds the difference between updated virtual dom and previous virtual dom
+
+
+
+EP6
+
+MONOLITH ARCHITECTURE
+MICROSERVICE ARCHITECTURE
+    different service for different jobs
+
+API CALLS IN REACT
+ load=>render whatever element we have => api call => re render 
+ above method is best as it enhances ux
+useEffect()
+    takes 2 argumenst 
+        callback function
+        dependecy array
+    useEffect(()=>{},[])
+
+api call
+
+shimmer ui
+
+conditional rendering
+
+whenever state variable changes,react triggers a reconciliation cycle(re renders the whole component)
