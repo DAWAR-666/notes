@@ -10,6 +10,7 @@ react gives helper function to optimize frontend
 react is fast as it uses virtual dom manipulation
 react is fast as it incorporates algorithm like reconciliation algo(react fiber)
     due to this efficient dom manipulation can be done
+react is known as single page application by the usage of link tags (EP7)
 
 const heading=React.createElement ("h1",{},"sup")
     here{} is used to enter the attributes of the tag like id and also user defined attributes
@@ -189,6 +190,9 @@ EP5
 
         whenever a state variable changes react will re-render the component
         useState()
+        never create outside of the component
+        and create at the top of component
+        and do not create inside any if else ,for loop,or function
             superpowerful state variable
                 maintains the state of a component
             import it using named import from react
@@ -216,9 +220,13 @@ API CALLS IN REACT
  load=>render whatever element we have => api call => re render 
  above method is best as it enhances ux
 useEffect()
+basic nature is to be called after each render
+if no dependency array ,it is called everytime that component inside which we have the function is rendered
     takes 2 argumenst 
-        callback function
-        dependecy array
+        callback function(compulsory)
+        dependecy array(optional) (can changes the behavior)
+            if dependecy array is empty => then useeffect is called on initial render and just once,when the component is rendered on the first time
+            if we put anything inside the dependency array then it will only be caleed whenever the depnedency changes
     useEffect(()=>{},[])
 
 api call
@@ -228,3 +236,50 @@ shimmer ui
 conditional rendering
 
 whenever state variable changes,react triggers a reconciliation cycle(re renders the whole component)
+
+
+
+
+EP7
+
+
+routing
+react router dom library
+whenever we have to create route we have to develop routing configuration
+    for this import {createBrowserRouter} from react-router-dom
+    createBrowserRouter(takes array of object as argument)here each object defines the specific path and wht to do in that path
+    we create this to tell what should happen on a specific path or route
+    we can use another hook known as useRouteErorr if we geta  path that is not defined
+to provide routing configuration to our app we also have to import router provider along with createBrowserRouter
+
+children route
+    used for sharing layout .
+    like i want to keep the header intact so i put the about,err etc paths as a children of root path
+    such that they can share the header component and the component as per the path can be rendered below it
+    syntax=>
+        children:[{path,element},{same}]
+
+    <Outlet />
+    to render specific component as per path we have to import Outlet component through react router dom
+    and call it as normal component where we want to render the path specific components
+    with this we need not put any if else condition for path to render any specific component
+
+    to connect the about us text in header to the about component never use anchor tag to make it go to that path
+    this will reload the whole page and make the process slower
+
+    we can import Link component from reactRouterDom 
+        instead of using anchor tag we can use link component 
+            <Link to="/about"> about us </Link>
+            this will link the text to the specified path and will not reload the whole page
+            it will just replace or refresh the component taht is to be rendered 
+
+
+
+there are 2 types of routing server side and client side
+    server side
+        we have different html and when we click on any anchor tag it will fetch the details of that html and reload the hwole page
+        we make network call and that page is loaded
+    client side
+        here we do not make network call here all the code is present on the page
+        we just ask for the refreshing of component which just replaces the component and do not reload the whole page
+    
