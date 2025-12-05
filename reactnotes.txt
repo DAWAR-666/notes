@@ -186,7 +186,7 @@ EP5
         it has super power with logic behind it
         2 imp hooks (usestate(),useeffect())
         behaves a s a normal variable
-
+        NEVER UPDATE STATE VARIABLE DIRECTLY LIKE NORMAL VARIABLE WITH '='
 
         whenever a state variable changes react will re-render the component
         useState()
@@ -283,3 +283,36 @@ there are 2 types of routing server side and client side
         here we do not make network call here all the code is present on the page
         we just ask for the refreshing of component which just replaces the component and do not reload the whole page
     
+
+
+
+
+EP8
+
+
+
+class based components
+    its a class that extends react.component and 
+    has a render method that returns a pices of jsx component
+    when we load the class based component on our webpage that means we are loading the instance of that class
+    never update state variables directly
+    to update state in class component use this.setstate func
+
+LIFE CYCLE OF CLASS BASED component
+whenever the class component is rendered/loaded/mounted on the webpage
+    then first its constructor is called then the render method is called
+    there is method like render that is componentDidMount which is called when the rendering finishes
+    or the render function is completed
+
+    if a class comp is called inside another class comp. (parent child)
+    then
+    parent const
+    parent render
+    child const
+    child render
+    child compdid mount
+    parent component did mount
+
+check react lifecyle diagram for clarification
+componentDidMount is used to make api calls
+    similar to useEffect used in functional component    
