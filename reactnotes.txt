@@ -315,4 +315,26 @@ whenever the class component is rendered/loaded/mounted on the webpage
 
 check react lifecyle diagram for clarification
 componentDidMount is used to make api calls
-    similar to useEffect used in functional component    
+    similar to useEffect used in functional component 
+
+
+
+EP9
+
+
+
+optimisation
+    
+    chunking/code splitting/dynamic bundling/lazy loading/on demand loading
+        do not load the large component whenevr we go to our main webpage rather load that component only when we go to it or click it
+        eg.do not import that component like usual component rather use lazy and suspense component
+            const grocery=lazy(()=>import("./component/grocery") );
+            &&
+            use suspunse component and wrap the grocery component when defining path in static router
+            in element of the path write:
+            <Suspense fallback={return a jsx}><grocery/><Suspense/>
+
+            here fallback is used to load the jsx given in brackets to be loaded until the actual data of component that is to be loaded is received
+    single responsibilty principle
+        if we have a function a class or any comonent then it should perform only one task or should have only single responsibilty
+custom hooks
