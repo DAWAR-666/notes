@@ -338,3 +338,23 @@ optimisation
     single responsibilty principle
         if we have a function a class or any comonent then it should perform only one task or should have only single responsibilty
 custom hooks
+
+
+
+EP10
+
+styling
+    sass
+    scss
+    styled components
+    material ui
+    bootstrap
+    chakra ui
+
+    tailwind
+        generic css framework
+
+    postcss is a tool that is used by typescript
+        it is used for transforming css with javascript
+        used to make parcel understand what we have written in tailwind
+        parcel ko smjhane ke liye use hota hai ki tailwind me humne kya likha hai   
