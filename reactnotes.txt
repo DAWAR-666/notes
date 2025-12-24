@@ -358,3 +358,24 @@ styling
         it is used for transforming css with javascript
         used to make parcel understand what we have written in tailwind
         parcel ko smjhane ke liye use hota hai ki tailwind me humne kya likha hai   
+
+
+
+
+
+EP11
+
+
+
+
+    higher order components 
+        takes component as a n input and returns a new component
+
+    controlled and uncontrolled components
+
+    lifting the state up
+
+    props drilling
+        avoid it and use reactContext ,a global space so that any component can access that data
+
+
