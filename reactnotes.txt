@@ -379,3 +379,30 @@ EP11
         avoid it and use reactContext ,a global space so that any component can access that data
 
 
+
+
+EP12
+    similar libararies (zustand)
+    REDUX
+    a predictable state container for js apps
+    rtk =redux toolkit
+        seperate library than react not a part of react
+        used for managing states
+        not mandatory
+        used for very large app,where data is where huge
+        use when required
+
+
+
+    redux store is a big object and is kept in central global space
+        we can keep necessary data inside it
+        there are slices inside it for various types of data
+
+        eg for creating cart when we click on add button it dispatches and action
+            that action will call a function then that function will modify the cart slice 
+            we cant direclty modify that cart
+            that function is known as reducer function(all this for writing in cart slice)
+
+            for reading the data from cart slice we use selector the method of using selectors and reading the cart slice is known as subcribing to the the store
+
+
