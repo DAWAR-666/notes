@@ -406,3 +406,41 @@ EP12
             for reading the data from cart slice we use selector the method of using selectors and reading the cart slice is known as subcribing to the the store
 
 
+
+
+
+
+EP13
+
+TESTING
+
+    developer TESTING
+        manual testing 
+            testing manually if the feature is working fine or not
+            not feasible option as if a small feature is changed/added we can not test each and every thing again
+
+        
+        types of testing
+            unit testing
+            integration testing
+            end to end /e2e testing
+
+    testing
+        installed react testing library
+        installed jest
+        installed req dependencies for babel
+        configured bable by creating babel.config.js
+        run npm init jest for creating jest config file
+        install jsdom pacage from react testing library(website)
+        creating __test__ folder or naming a file with .test.js or .test.ts or .spec.js or .spec.ts
+            these means that these are test files/folders
+        __ before and after the name of test folder is known as dunder (double under)
+        install @babel/preset-react
+        added , '@babel/preset-react',{runtime :'automatic'} ], in babel.config.js
+        installed @testing-library/jest-dom for inclusion of tobeinthedocument func
+
+
+    
+    jsdom test environment
+        test do not run on browser they need an environment and its like a browser but not browser
+        tested code runs over here
